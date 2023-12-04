@@ -1,3 +1,5 @@
+# SCRIPT IS CURRENTLY UNDER CONSTRUCTION AND MAY/DOES NOT WORK
+
 # highfi
 Highfi is a tool used for multiple wifi-related attacks, made simple!
 
